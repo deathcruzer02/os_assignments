@@ -9,7 +9,6 @@ int main()
 
     if (pid > 0)
     {
-	wait(NULL);
         printf("in parent process");
 	printf("\n");
     }
