@@ -152,8 +152,9 @@ int main()
                                               wait(NULL);wait(NULL);wait(NULL);
                                               wait(NULL);
 
-                                              int sum1;int sum2;int sum3;int sum4;int sum5;int sum6;int sum7;int sum8;int sum9;int sum10;
-											  int total_sum=0;
+											  int sum1; int sum2; int sum3; int sum4;int sum5;int sum6;int sum7;int sum8;int sum9;int sum10;
+											  int total_sum = 0;
+
                                               read(pipe1[0],&sum1,sizeof(sum1));
                                               read(pipe2[0],&sum2,sizeof(sum2));
                                               read(pipe3[0],&sum3,sizeof(sum3));
@@ -165,7 +166,7 @@ int main()
                                               read(pipe9[0],&sum9,sizeof(sum9));
                                               read(pipe10[0],&sum10,sizeof(sum10));
                                               total_sum=sum1+sum2+sum3+sum4+sum5+sum6+sum7+sum8+sum9+sum10;
-                                              printf("%d",total_sum);
+											  printf("%d", total_sum);
 											  printf("\n");
                                           }
                                       }

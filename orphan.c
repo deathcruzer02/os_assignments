@@ -1,0 +1,24 @@
+// Parent process finishes execution while the child process is running. The child process becomes orphan.
+#include<stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main()
+{
+    int pid = fork();
+
+    if (pid > 0)
+    {
+	wait(NULL);
+        printf("in parent process");
+	printf("\n");
+    }
+    else if (pid == 0)
+    {
+        sleep(30);
+        printf("in child process");
+	printf("\n");
+    }
+
+    return 0;
+}
